@@ -40,21 +40,21 @@ public class MainActivity extends BaseActivity {
         mBasicBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goTo(BasicActivity.class);
+//                goTo(BasicActivity.class);
             }
         });
 
         mEasyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goTo(EasyPopActivity.class);
+//                goTo(EasyPopActivity.class);
             }
         });
 
         mRvBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goTo(RecyclerViewActivity.class);
+//                goTo(RecyclerViewActivity.class);
             }
         });
     }

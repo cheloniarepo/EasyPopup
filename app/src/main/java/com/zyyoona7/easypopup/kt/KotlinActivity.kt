@@ -1,6 +1,6 @@
 package com.zyyoona7.easypopup.kt
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 //import com.zyyoona7.lib.init
 

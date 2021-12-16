@@ -21,15 +21,15 @@ android {
 }
 
 dependencies {
-    api fileTree(include: ['*.jar'], dir: 'libs')
-    api project(':lib')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib')
 
-    api "com.android.support:appcompat-v7:$support_version"
-    api "com.android.support:recyclerview-v7:$support_version"
-    api 'com.android.support.constraint:constraint-layout:1.1.0'
-    api 'com.blankj:utilcode:1.13.10'
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.36'
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'com.blankj:utilcodex:1.31.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 repositories {
     mavenCentral()

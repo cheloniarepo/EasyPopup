@@ -1,11 +1,12 @@
 package com.zyyoona7.easypopup.easypop;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.SizeUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -75,18 +76,18 @@ public class ComplexPopup extends BasePopup<ComplexPopup> {
             }
         });
 
-        mComplexAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
-            @Override
-            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-                switch (view.getId()) {
-                    case R.id.btn_complex_delete:
-                        mComplexAdapter.remove(position);
-                        break;
-                    default:
-
-                }
-            }
-        });
+//        mComplexAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+//            @Override
+//            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+//                switch (view.getId()) {
+//                    case R.id.btn_complex_delete:
+//                        mComplexAdapter.remove(position);
+//                        break;
+//                    default:
+//
+//                }
+//            }
+//        });
     }
 
     public void setAbc() {

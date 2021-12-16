@@ -1,13 +1,14 @@
 package com.zyyoona7.easypopup.easypop;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -77,19 +78,19 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private void initEvents() {
-        mPopAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
-            @Override
-            public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
-                int[] locations = new int[2];
-                view.getLocationOnScreen(locations);
-                Log.i(TAG, Arrays.toString(locations));
-                if (locations[1] > getResources().getDisplayMetrics().heightPixels / 2) {
-                    mRvPop.showAtAnchorView(view, YGravity.ABOVE, XGravity.LEFT);
-                } else {
-                    mRvPop.showAtAnchorView(view, YGravity.BELOW, XGravity.LEFT);
-                }
-            }
-        });
+//        mPopAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+//            @Override
+//            public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+//                int[] locations = new int[2];
+//                view.getLocationOnScreen(locations);
+//                Log.i(TAG, Arrays.toString(locations));
+//                if (locations[1] > getResources().getDisplayMetrics().heightPixels / 2) {
+//                    mRvPop.showAtAnchorView(view, YGravity.ABOVE, XGravity.LEFT);
+//                } else {
+//                    mRvPop.showAtAnchorView(view, YGravity.BELOW, XGravity.LEFT);
+//                }
+//            }
+//        });
 
         mPopAdapter.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -103,14 +104,14 @@ public class RecyclerViewActivity extends AppCompatActivity {
             }
         });
 
-        mPopAdapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
-                LogUtils.i("onLongClick");
-                // TODO: 2018/5/10 判断屏幕上下左右的边界来选择弹出方向
-                mRvPop.showAtLocation(view, Gravity.NO_GRAVITY, (int) mLastX, (int) mLastY);
-                return true;
-            }
-        });
+//        mPopAdapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(BaseQuickAdapter adapter, View view, int position) {
+//                LogUtils.i("onLongClick");
+//                // TODO: 2018/5/10 判断屏幕上下左右的边界来选择弹出方向
+//                mRvPop.showAtLocation(view, Gravity.NO_GRAVITY, (int) mLastX, (int) mLastY);
+//                return true;
+//            }
+//        });
     }
 }
