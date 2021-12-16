@@ -4,6 +4,15 @@ android {
     compileSdkVersion compile_sdk_version
     buildToolsVersion build_tools_version
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
     defaultConfig {
         applicationId "com.zyyoona7.easypopup"
         minSdkVersion min_sdk_version
